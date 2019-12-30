@@ -13,7 +13,7 @@ client.on('message', message => {
   if (message.channel.id === '458527068188180501') {
     if (message.content) {
       let emoji = client.emojis.find(x => x.name === "dice2")
-      let emoji2 = client.emojis.find(x => x.name === "✅")
+      let emoji2 = client.emojis.find(x => x.name === "white_check_mark")
       message.react(emoji)
       message.react(emoji2)
     } else {
