@@ -28,7 +28,7 @@ client.on('message', message => {
     if (message.content) {
       let emoji = client.emojis.find(x => x.name === "dice2") // khusus server emoji
       message.react(emoji)
-      message.react(':white_check_mark:') // khusus unicode (https://emojipedia.org/)
+      message.react('✅') // khusus unicode (https://emojipedia.org/)
     } else {
       return;
     }
