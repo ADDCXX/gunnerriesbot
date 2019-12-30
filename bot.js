@@ -4,7 +4,7 @@ const prefix = ';'
 
 client.on('ready', () => {
     console.log('I am ready!');
-  
+
   function randomStatus() {
         let status = ['Patroling around the City 🚔 24/7', 'I was just an ordinary robot who was ordered to make other people happy | Spesial thanks to Ray'];
         let rstatus = Math.floor(Math.random() * status.length);
@@ -15,41 +15,17 @@ client.on('ready', () => {
 
 client.on('message', message => {
   let msg = message.content.toLowerCase();
-  let sender = message.author;
+  let senderId = message.author.id;
+  let senderUsername = message.author.username;
+  let senderAvatar = message.author.avatar;
   let args = message.content.slice(prefix.length).trim().split(/ +/g);
   let cmd = args.shift().toLowerCase();
-  
-  if (message.content.toLowerCase() === 'link') {
-    message.reply('https://discord.gg/dzXypuu');
-  }
-  
-  if (message.content.startsWith(prefix + "eval")) {
-    if(message.author.id !== "268710043661107200" && message.author.id !== "331265944363991042") return;
-    try {
-      const code = args.join(" ");
-      let evaled = eval(code);
- 
-      if (typeof evaled !== "string")
-        evaled = require("util").inspect(evaled);
- 
-      message.channel.send(clean(evaled), {code:"xl"});
-    } catch (err) {
-      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
-    }
-    
-    function clean(text) {
-    if (typeof (text) === "string")
-        return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
-    else
-        return text;
-    };
-  }
-  
+
   if (message.channel.id === '458527068188180501') {
     if (message.content) {
       let emoji = client.emojis.find(x => x.name === "dice2") // khusus server emoji
       message.react(emoji)
-      message.react('✅') // khusus unicode (https://emojipedia.org/)
+      message.react(':white_check_mark:') // khusus unicode (https://emojipedia.org/)
     } else {
       return;
     }
