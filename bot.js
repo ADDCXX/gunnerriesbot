@@ -22,7 +22,7 @@ client.on('message', message => {
   let cmd = args.shift().toLowerCase();
 
   if (message.content.toLowerCase() === 'link') {
-    message.reply('https://discord.gg/dzXypuu%27);
+    message.reply('https://discord.gg/dzXypuu%27 ');
  }
   if (message.channel.id === '458527068188180501') {
     if (message.content) {
