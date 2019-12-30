@@ -19,7 +19,7 @@ client.on('message', message => {
   let args = message.content.slice(prefix.length).trim().split(/ +/g);
   let cmd = args.shift().toLowerCase();
   
-  if (message.content === 'Link') {
+  if (message.content.toLowerCase() === 'link') {
     message.reply('https://discord.gg/dzXypuu');
   }
   
