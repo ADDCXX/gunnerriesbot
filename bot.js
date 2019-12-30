@@ -13,7 +13,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-  if (message.content === 'Link') {
+  if (message.content === 'link') {
     message.reply('https://discord.gg/dzXypuu');
   }
   
