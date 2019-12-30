@@ -6,7 +6,7 @@ client.on('ready', () => {
     console.log('I am ready!');
   
   function randomStatus() {
-        let status = ['Patroling around the City 🚔', 'I was just an ordinary robot who was ordered to make other people happy | Spesial thanks to Ray'];
+        let status = ['Patroling around the City 🚔 24/7', 'I was just an ordinary robot who was ordered to make other people happy | Spesial thanks to Ray'];
         let rstatus = Math.floor(Math.random() * status.length);
         client.user.setActivity(status[rstatus], {type: 0}); // bisa diganti: PLAYING LISTENING WATCHING STREAMING
 
