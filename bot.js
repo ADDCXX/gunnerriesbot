@@ -21,15 +21,18 @@ client.on('message', message => {
   let args = message.content.slice(prefix.length).trim().split(/ +/g);
   let cmd = args.shift().toLowerCase();
 
+  if (message.content.toLowerCase() === 'link') {
+    message.reply('https://discord.gg/dzXypuu%27);
+ }
   if (message.channel.id === '458527068188180501') {
     if (message.content) {
       let emoji = client.emojis.find(x => x.name === "dice2") // khusus server emoji
       message.react(emoji)
-      message.react('✅') // khusus unicode (https://emojipedia.org/)
+      message.react(':white_check_mark:') // khusus unicode (https://emojipedia.org/)
     } else {
       return;
     }
   }
 });
-
+    
 client.login(process.env.BOT_TOKEN);
