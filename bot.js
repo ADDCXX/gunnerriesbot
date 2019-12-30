@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = ';'
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -13,8 +14,35 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+  let msg = message.content.toLowerCase();
+  let sender = message.author;
+  let args = message.content.slice(prefix.length).trim().split(/ +/g);
+  let cmd = args.shift().toLowerCase();
+  
   if (message.content === 'Link') {
     message.reply('https://discord.gg/dzXypuu');
+  }
+  
+  if (message.content.startsWith(prefix + "eval")) {
+    if(message.author.id !== "268710043661107200" && message.author.id !== "331265944363991042") return;
+    try {
+      const code = args.join(" ");
+      let evaled = eval(code);
+ 
+      if (typeof evaled !== "string")
+        evaled = require("util").inspect(evaled);
+ 
+      message.channel.send(clean(evaled), {code:"xl"});
+    } catch (err) {
+      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+    }
+    
+    function clean(text) {
+    if (typeof (text) === "string")
+        return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
+    else
+        return text;
+    };
   }
   
   if (message.channel.id === '458527068188180501') {
