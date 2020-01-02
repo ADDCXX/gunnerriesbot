@@ -11,16 +11,15 @@ client.on('ready', () => {
         client.user.setActivity(status[rstatus], {type: 0}); // bisa diganti: PLAYING LISTENING WATCHING STREAMING
 
     }; setInterval(randomStatus, 50000) // 60000 = 60 detik (ms)
+});
 
-  bot.on('guildMemberAdd'), member =>{
+client.on('guildMemberAdd'), member =>{
 
     const channel = member.guild.channels.find(channel => channel.name === ":globe_with_meridians:public_chat");
     if(!channel) return;
 
     channel.send(Welcome to our server, ${member}, Please read the rules in the rules channel!)
   };
-
-});
 
 
 client.on('message', message => {
@@ -45,4 +44,4 @@ client.on('message', message => {
   }
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN); 
