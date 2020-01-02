@@ -43,5 +43,4 @@ bot.on('guildMemberAdd'), member => {
     channel.send(`Welcome to our server, ${member}, Please read the rules in the rules channel!`)
 });
 
-    
 client.login(process.env.BOT_TOKEN);
