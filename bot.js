@@ -34,5 +34,13 @@ client.on('message', message => {
     }
   }
 });
+
+bot.on('guildMemberAdd'), member =>{
+
+    const channel = member.guild.channels.find(channel => channel.name === "ngetest");
+    if(!channel) return;
+
+    channel.send(`Welcome to our server, ${member}, Please read the rules in the rules channel!`)
+});
     
 client.login(process.env.BOT_TOKEN);
