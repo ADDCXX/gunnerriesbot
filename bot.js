@@ -4,6 +4,15 @@ const prefix = ';'
 
 client.on('ready', () => {
     console.log('I am ready!');
+});
+
+bot.on('guildMemberAdd'), member =>{
+
+    const channel = member.guild.channels.find(channel => channel.name === "ngetest");
+    if(!channel) return;
+
+    channel.send(`Welcome to our server, ${member}, Please read the rules in the rules channel!`)
+});
 
   function randomStatus() {
         let status = ['Patroling around the City 🚔 24/7', 'I was just an ordinary robot who was ordered to make other people happy | Spesial thanks to Ray'];
@@ -33,14 +42,6 @@ client.on('message', message => {
       return;
     }
   }
-});
-
-bot.on('guildMemberAdd'), member =>{
-
-    const channel = member.guild.channels.find(channel => channel.name === "ngetest");
-    if(!channel) return;
-
-    channel.send(`Welcome to our server, ${member}, Please read the rules in the rules channel!`)
 });
     
 client.login(process.env.BOT_TOKEN);
