@@ -6,7 +6,7 @@ client.on('ready', () => {
     console.log('I am ready!');
 
   function randomStatus() {
-        let status = ['Patroling around the City :oncoming_police_car: 24/7', 'I was just an ordinary robot who was ordered to make other people happy | Spesial thanks to Ray'];
+        let status = ['Patroling around the City 🚔 24/7', 'I was just an ordinary robot who was ordered to make other people happy | Spesial thanks to Ray'];
         let rstatus = Math.floor(Math.random() * status.length);
         client.user.setActivity(status[rstatus], {type: 0}); // bisa diganti: PLAYING LISTENING WATCHING STREAMING
 
@@ -40,7 +40,7 @@ client.on('message', message => {
     if (message.content) {
       let emoji = client.emojis.find(x => x.name === "dice2") // khusus server emoji
       message.react(emoji)
-      message.react(':white_check_mark:') // khusus unicode (https://emojipedia.org/)
+      message.react('✅') // khusus unicode (https://emojipedia.org/)
     } else {
       return;
     }
