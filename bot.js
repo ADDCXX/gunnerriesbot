@@ -18,7 +18,7 @@ client.on('guildMemberAdd', member =>{
     const channel = member.guild.channels.find(channel => channel.id === "276225910464708610");
     if(!channel) return;
 
-    channel.send(`Welcome to our server, ${member}, Please read the rules in the rules channel!`)
+    channel.send(`Welcome aboard! ${member}, Please register your biodata information here! #📝introductions`)
 
   });
 
