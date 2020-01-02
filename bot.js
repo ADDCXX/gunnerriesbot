@@ -4,8 +4,7 @@ const prefix = ';'
 
 client.on('ready', () => {
     console.log('I am ready!');
-});
-
+    
 bot.on('guildMemberAdd'), member =>{
 
     const channel = member.guild.channels.find(channel => channel.name === "🌐public_chat");
