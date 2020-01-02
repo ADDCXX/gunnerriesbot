@@ -4,23 +4,24 @@ const prefix = ';'
 
 client.on('ready', () => {
     console.log('I am ready!');
-});
-
-bot.on('guildMemberAdd'), member =>{
-
-    const channel = member.guild.channels.find(channel => channel.name === "🌐public_chat");
-    if(!channel) return;
-
-    channel.send(`Welcome to our server, ${member}, Please read the rules in the rules channel!`)
-});
 
   function randomStatus() {
-        let status = ['Patroling around the City 🚔 24/7', 'I was just an ordinary robot who was ordered to make other people happy | Spesial thanks to Ray'];
+        let status = ['Patroling around the City :oncoming_police_car: 24/7', 'I was just an ordinary robot who was ordered to make other people happy | Spesial thanks to Ray'];
         let rstatus = Math.floor(Math.random() * status.length);
         client.user.setActivity(status[rstatus], {type: 0}); // bisa diganti: PLAYING LISTENING WATCHING STREAMING
 
     }; setInterval(randomStatus, 50000) // 60000 = 60 detik (ms)
+
+  bot.on('guildMemberAdd'), member =>{
+
+    const channel = member.guild.channels.find(channel => channel.name === ":globe_with_meridians:public_chat");
+    if(!channel) return;
+
+    channel.send(Welcome to our server, ${member}, Please read the rules in the rules channel!)
+  };
+
 });
+
 
 client.on('message', message => {
   let msg = message.content.toLowerCase();
@@ -37,11 +38,11 @@ client.on('message', message => {
     if (message.content) {
       let emoji = client.emojis.find(x => x.name === "dice2") // khusus server emoji
       message.react(emoji)
-      message.react('✅') // khusus unicode (https://emojipedia.org/)
+      message.react(':white_check_mark:') // khusus unicode (https://emojipedia.org/)
     } else {
       return;
     }
   }
 });
-    
+
 client.login(process.env.BOT_TOKEN);
