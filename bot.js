@@ -6,7 +6,7 @@ client.on('ready', () => {
     console.log('I am ready!');
 
   function randomStatus() {
-        let status = ['Patroling around the City 🚔 24/7', 'Dont forget to Obey the rules and conditions of this server !'];
+        let status = ['Patroling around the City 🚔 24/7', 'Dont forget to obey the rules and conditions of this server !'];
         let rstatus = Math.floor(Math.random() * status.length);
         client.user.setActivity(status[rstatus], {type: 0}); // bisa diganti: PLAYING LISTENING WATCHING STREAMING
 
@@ -19,7 +19,6 @@ client.on('guildMemberAdd', member =>{
     if(!channel) return;
 
     channel.send(`**Welcome Aboard !** ${member} 
-:white_small_square:You are still an illegal immigrant ! 
 :white_small_square:Please register your bio immediately in the information channel !`)
 
   });
