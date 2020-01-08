@@ -18,8 +18,7 @@ client.on('guildMemberAdd', member =>{
     const channel = member.guild.channels.find(channel => channel.id === "276225910464708610");
     if(!channel) return;
 
-    channel.send(`**Welcome Aboard !** ${member} 
-:white_small_square:Please register your bio immediately in the information channel !`)
+    channel.send(`> Welcome Aboard ! ${member}`)
 
   });
 
