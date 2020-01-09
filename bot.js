@@ -13,16 +13,6 @@ client.on('ready', () => {
     }; setInterval(randomStatus, 50000) // 60000 = 60 detik (ms)
 });
 
-client.on('guildMemberAdd', member =>{
-
-    const channel = member.guild.channels.find(channel => channel.id === "276225910464708610");
-    if(!channel) return;
-
-    channel.send(`> Welcome Aboard ! ${member}`)
-
-  });
-
-
 client.on('message', message => {
   let msg = message.content.toLowerCase();
   let senderId = message.author.id;
@@ -38,11 +28,11 @@ client.on('message', message => {
     if (message.content) {
       let emoji = client.emojis.find(x => x.name === "dice2") // khusus server emoji
       message.react(emoji)
-      message.react('✅') // khusus unicode (https://emojipedia.org/)
+      message.react('âœ…') // khusus unicode (https://emojipedia.org/)
     } else {
       return;
     }
   }
 });
-
-client.login(process.env.BOT_TOKEN); 
+    
+client.login(process.env.BOT_TOKEN);
