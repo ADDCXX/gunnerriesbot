@@ -27,10 +27,10 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  if (message.channel.id === '662767425464434690'){
-      let emoji = message.guild.emojis.find('name', "websster")
+  if (message.channel.id === '458527068188180501'){
+      let emoji = message.guild.emojis.find('name', "GunnerriesBadge")
       message.react(emoji)
-      message.react(':white_check_mark:');
+      message.react('✅');
   }
 });
     
