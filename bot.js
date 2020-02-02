@@ -27,7 +27,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  if (message.channel.id === '662767425464434690'){
+  if (message.channel.id === '458527068188180501'){
       let emoji = message.guild.emojis.find('name', "websster")
       message.react(emoji);
   }
