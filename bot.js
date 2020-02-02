@@ -6,7 +6,8 @@ client.on('ready', () => {
     console.log('I am ready!');
 
   function randomStatus() {
-        let status = ['Patroling around the City :oncoming_police_car: 24/7', 'Dont forget to obey the rules and conditions of this server !'];
+        let status = ['Patroling around the Gunnerries City 🚔 24/7', 'Dont forget to obey the rules and conditions of this server !', '
+I'm in love with my Daddy!'];
         let rstatus = Math.floor(Math.random() * status.length);
         client.user.setActivity(status[rstatus], {type: 0}); // bisa diganti: PLAYING LISTENING WATCHING STREAMING
 
