@@ -6,7 +6,7 @@ client.on('ready', () => {
     console.log('I am ready!');
 
   function randomStatus() {
-        let status = ['Patroling around the City 🚔 24/7', 'Dont forget to obey the rules and conditions of this server !'];
+        let status = ['Patroling around the City :oncoming_police_car: 24/7', 'Dont forget to obey the rules and conditions of this server !'];
         let rstatus = Math.floor(Math.random() * status.length);
         client.user.setActivity(status[rstatus], {type: 0}); // bisa diganti: PLAYING LISTENING WATCHING STREAMING
 
@@ -24,14 +24,12 @@ client.on('message', message => {
   if (message.content.toLowerCase() === 'link') {
     message.reply('https://discord.gg/dzXypuu ');
  }
-  if (message.channel.id === '458527068188180501') {
-    if (message.content) {
-      let emoji = client.emojis.find(x => x.name === "dice2") // khusus server emoji
-      message.react(emoji)
-      message.react('✅') // khusus unicode (https://emojipedia.org/)
-    } else {
-      return;
-    }
+});
+
+client.on('message', message => {
+  if (message.channel.id === '662767425464434690'){
+      let emoji = message.guild.emojis.find('name', "websster")
+      message.react(emoji);
   }
 });
     
