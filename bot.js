@@ -24,14 +24,14 @@ client.on('message', message => {
   if (message.content.toLowerCase() === 'link') {
     message.reply('https://discord.gg/dzXypuu ');
  }
-});
 
-client.on('message', message => {
   if (message.channel.id === '458527068188180501'){
       let emoji = message.guild.emojis.find('name', "GunnerriesBadge")
       message.react(emoji)
-      message.react('✅');
+      message.react(':white_check_mark:');
   }
+
 });
+
     
 client.login(process.env.BOT_TOKEN);
