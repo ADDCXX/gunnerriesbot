@@ -26,9 +26,9 @@ client.on('message', message => {
  }
 
   if (message.channel.id === '458527068188180501'){
-      let emoji = message.guild.emojis.find('name', "GunnerriesBadge")
+      let emoji = message.guild.emojis.find('name', "✅")
       message.react(emoji)
-      message.react('✅');
+      message.react('GunnerriesBadge');
   }
 
 });
