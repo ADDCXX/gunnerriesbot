@@ -27,7 +27,7 @@ client.on('message', message => {
 
   if (message.channel.id === '458527068188180501'){
       let emoji = message.guild.emojis.find('name', "verified")
-      message.react('📟')
+      message.react('📨')
       message.react(emoji)
   }
 
